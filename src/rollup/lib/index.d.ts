@@ -1,1 +1,1 @@
-export { default as demoCom } from './demo';
+export { default as harmonyInput } from './input';

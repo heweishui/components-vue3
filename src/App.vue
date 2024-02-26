@@ -1,6 +1,12 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import { harmonyInput } from 'harmony-components-vue3'
+const val = ref('')
+const handleEnter = (e: any) => {
+  val.value = e
+}
 </script>
 
 <template>
@@ -14,7 +20,8 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <div>----------------------------------------</div>
-        <demoCo>1</demoCo>
+        <harmonyInput title="姓名" :focus="true" @onkeydown="handleEnter"></harmonyInput>
+        <p>harmonyInput数据：{{ val}}</p>
       </nav>
     </div>
   </header>

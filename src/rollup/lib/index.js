@@ -1,2 +1,2 @@
-export { default as demoCom } from './demo/index.js';
+export { default as harmonyInput } from './input/index.js';
 import 'vue';
